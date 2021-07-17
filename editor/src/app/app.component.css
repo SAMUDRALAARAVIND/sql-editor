@@ -1,0 +1,31 @@
+.table-layout{
+    background-color: #e7e7e7;
+    padding:50px;
+}
+.app-ace-editor{
+    border:1px solid green;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+}
+.code-editor {
+    max-height: 70vh;
+    cursor: not-allowed;
+    font-size: 95%;
+    font-weight: 100;
+    border: 2px solid green;
+  }
+  .editor{
+      background-color: #b7f7f1;
+      padding: 30px;
+  }
+  .output{
+      background-color: #61e09a;
+      box-shadow: rgba(0, 0, 0, 0.15);
+  }
+  .success{
+      background-color: green;
+      padding:10px;
+  }
+  .errorMessage{
+      background-color: rgb(235, 111, 111);
+      padding:20px;
+  }

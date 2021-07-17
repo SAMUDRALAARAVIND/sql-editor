@@ -1,0 +1,31 @@
+create table users(
+    id int PRIMARY KEY,
+    username varchar(100),
+    email varchar(150),
+    password varchar(20));
+create table products(
+    id int PRIMARY key AUTO_INCREMENT ,
+    name varchar(100),
+    price int ,
+    description varchar(200));
+create table orders(
+    id int primary key AUTO_INCREMENT,
+    userid int,
+    productid int,
+    address varchar(200),
+    price int,
+    quantity int,
+    FOREIGN KEY (userid) REFERENCES users(id),
+    FOREIGN KEY (productid) REFERENCES products(id));
+create table deliveryboys(
+    id int PRIMARY KEY AUTO_INCREMENT,
+    username varchar(100),
+    email varchar(150),
+    password varchar(20),
+    phone varchar(10));
+create table delivered(
+    id int PRIMARY KEY AUTO_INCREMENT,
+    orderid int,
+    deliveryboyid int,
+    FOREIGN KEY (orderid) REFERENCES orders(id),
+    FOREIGN KEY (deliveryboyid) REFERENCES deliveryboys(id));

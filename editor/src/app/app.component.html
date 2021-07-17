@@ -1,0 +1,34 @@
+<div  style="margin-top:50px;padding:30px;background-color:#aaf7e0">
+    <select  style="width:200px; padding:8px">
+      <option *ngFor="let tableName of tableList" [value]="tableName">{{tableName}}</option>
+      <!-- <option value="users" >users</option>
+      <option value="products">orders</option>
+      <option value="orders" >products</option>
+      <option value="deliveryboys"  >deliveryboys</option>
+      <option value="delivered" >delivered</option> -->
+    </select>
+    <button class="btn btn-success" style="margin-left:30px;width:150px" (click)="tableLayout = true" >show layouts</button>
+    <button class="btn btn-danger" style="margin-left:30px;width:150px" (click)="tableLayout = false" >Hide All</button>
+    <a class="btn btn-info" style="margin-left:30px;width:150px" (click)='goToLink("https://sql-checker.herokuapp.com/")' target="_blank">Documentation</a>
+    <div class="table-layout" *ngIf="tableLayout"> 
+      <app-table-layout></app-table-layout>
+    </div>
+</div><br> <br>
+<div class="editor">
+         
+        <div class="app-ace-editor" #editor style="height: 400px;">
+        </div>
+        <br>
+        <!-- <button style="width:200px" class="btn btn-success" (click)="executeQuery()" >Execute</button> -->
+        <button style="width:100px;" class="btn btn-warning" (click)="resetCode()">Reset Code</button>
+        <button style="width:100px;margin-left:10px" class="btn btn-danger" (click)="clearCode()" >Clear Code</button>
+        <!-- <button style="float: right;width:150px" class="btn btn-warning" (click)="resetCode()">Reset code</button> -->
+        <button  style="float:right;width:200px" class="btn btn-success" (click)="executeQuery()">Execute</button>
+        <button (click)="clearOutput()" class="btn btn-primary" style="width:100px;margin-left:10px">Clear Output</button>
+</div>
+<br><br>
+<div id="output">
+</div>
+
+
+
