@@ -11,6 +11,7 @@ export class AppComponent implements AfterViewInit, OnInit {
   @ViewChild("editor") private editor: ElementRef<HTMLElement>;
   tableLayout =  false;
   fontSize = 14;
+   loading = false;
   query = "SELECT * FROM users;"; 
   tableList = [];
   output: any ;
@@ -23,7 +24,13 @@ export class AppComponent implements AfterViewInit, OnInit {
   constructor(private restService: RestService){
     
   }
+  consoleMessage(){
+    console.clear();
+    console.log("%c STOP READING","color:red;font-size:30px")
+  }
   ngOnInit(){
+    setTimeout(this.consoleMessage, 1000);
+    
     this.restService.getTables()
     .subscribe((data: any)=>{
       this.tableList = []
