@@ -28,13 +28,13 @@ export class RestService {
   }
   executeQuery(query){
     return this.httpClient
-    .get(`https://sql-checker.herokuapp.com/query?query=${query}`, this.httpOptions)
+    .get(`https://https://sql-checker.onrender.com/query?query=${query}`, this.httpOptions)
     .pipe(catchError(this.handleError));
   }
   getTables(){
     
     return this.httpClient
-    .get("https://sql-checker.herokuapp.com/tables", this.httpOptions)
+    .get("https://https://sql-checker.onrender.com/tables", this.httpOptions)
     .pipe(catchError(this.handleError));
   }
 
