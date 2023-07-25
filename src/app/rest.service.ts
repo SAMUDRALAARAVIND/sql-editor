@@ -28,13 +28,13 @@ export class RestService {
   }
   executeQuery(query){
     return this.httpClient
-    .get(`https://https://sql-checker.onrender.com/query?query=${query}`, this.httpOptions)
+    .get(`https://sql-checker.onrender.com/query?query=${query}`, this.httpOptions)
     .pipe(catchError(this.handleError));
   }
   getTables(){
     
     return this.httpClient
-    .get("https://https://sql-checker.onrender.com/tables", this.httpOptions)
+    .get("https://sql-checker.onrender.com/tables", this.httpOptions)
     .pipe(catchError(this.handleError));
   }
 
